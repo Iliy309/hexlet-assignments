@@ -4,7 +4,6 @@ import java.util.Locale;
 
 // BEGIN
 public class Flat implements Home {
-
     private double area;
     private double balconyArea;
     private int floor;
