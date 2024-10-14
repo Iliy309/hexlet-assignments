@@ -1,5 +1,4 @@
 package exercise;
-
 // BEGIN
 public class InputTag implements TagInterface {
     private String type;

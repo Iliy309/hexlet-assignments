@@ -1,7 +1,6 @@
 package exercise;
 
 import java.util.List;
-import java.text.Collator;
 import java.util.ArrayList;
 
 // BEGIN
@@ -27,6 +26,5 @@ public class LabelTag implements TagInterface {
         return renderValue.toString();
         // <label>Press Submit<input type="submit" value="Save"></label>
     }
-
 }
 // END
