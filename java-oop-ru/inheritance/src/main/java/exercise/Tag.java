@@ -1,6 +1,5 @@
 package exercise;
 
-import java.util.stream.Collectors;
 import java.util.Map;
 
 // BEGIN
@@ -28,8 +27,6 @@ public abstract class Tag {
             html.append(String.format(" %s=\"%s\"", items.getKey(), items.getValue()));
         }
         return html.append(">").toString();
-        //<img class="v-10" id="wop">
     }
 }
-
 // END

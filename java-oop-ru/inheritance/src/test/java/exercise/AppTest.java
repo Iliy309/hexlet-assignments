@@ -34,8 +34,6 @@ class AppTest {
         attributes1.put("id", "10");
         attributes1.put("lang", "en");
 
-        // List<Tag> children = new ArrayList<>();
-
         Tag p = new PairedTag("p", attributes1, "Text paragraph", new ArrayList<Tag>());
         String actual1 = p.toString();
         String expected1 = "<p class=\"m-10\" id=\"10\" lang=\"en\">Text paragraph</p>";
@@ -46,7 +44,6 @@ class AppTest {
         String actual2 = span.toString();
         String expected2 = "<span></span>";
         assertThat(actual2).isEqualTo(expected2);
-
     }
 
     @Test

@@ -3,8 +3,6 @@ package exercise;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
 // BEGIN
 public class PairedTag extends Tag {
 
@@ -30,17 +28,6 @@ public class PairedTag extends Tag {
         html.append("</" + getName() + ">");
 
         return html.toString();
-        // <p id="abc">Text paragraph</p>
-        // Tag div = new PairedTag(
-        // "div",
-        // Map.of("class", "y-5"),
-        // "",
-        // List.of(
-        // new SingleTag("br", Map.of("id", "s")),
-        // new SingleTag("hr", Map.of("class", "a-5"))
-        // )
-        // <div class="y-5"><br id="s"><hr class="a-5"></div>
     }
-
 }
 // END
