@@ -14,4 +14,5 @@ public class InputTag implements TagInterface {
         return String.format("<input type=\"%s\" value=\"%s\">", type, value);
     }
 }
+
 // END
