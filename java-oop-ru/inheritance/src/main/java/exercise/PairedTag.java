@@ -3,6 +3,7 @@ package exercise;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
+
 // BEGIN
 public class PairedTag extends Tag {
 
@@ -19,8 +20,8 @@ public class PairedTag extends Tag {
     public String toString() {
         System.out.println(super.toString());
         var html = new StringBuilder()
-                            .append(super.toString())
-                            .append(body);
+                .append(super.toString())
+                .append(body);
         childTags.forEach(tag -> {
             html.append(tag.toString());
         });

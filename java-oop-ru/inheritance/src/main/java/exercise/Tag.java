@@ -13,15 +13,15 @@ public abstract class Tag {
         this.attribute = attribute;
     }
 
-    protected Map<String, String> getAttribute(){
+    protected Map<String, String> getAttribute() {
         return attribute;
     }
 
-    protected String getName(){
+    protected String getName() {
         return name;
     }
 
-    public  String toString(){
+    public String toString() {
         var html = new StringBuilder().append("<" + getName());
         for (var items : getAttribute().entrySet()) {
             html.append(String.format(" %s=\"%s\"", items.getKey(), items.getValue()));
