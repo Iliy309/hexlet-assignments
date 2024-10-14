@@ -10,10 +10,9 @@ import java.util.Set;
 public class App {
 
     public static void swapKeyValue(KeyValueStorage storage) {
-        var copy = new HashMap<>(storage.toMap());
-        storage.toMap().clear();
-        for (var items : copy.entrySet()) {
-            storage.set(items.getValue(), items.getKey());
+        for (var items : storage.toMap().entrySet()) {
+            storage.unset(items.getKey());
+            storage.set(items.getValue(),items.getKey());
         }
     }
 }
