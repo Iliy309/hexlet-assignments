@@ -9,4 +9,5 @@ public class SingleTag extends Tag {
         super(name, map);
     }
 }
+
 // END
