@@ -1,9 +1,7 @@
 package exercise;
 
-import lombok.SneakyThrows;
 import lombok.Value;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // BEGIN
@@ -17,12 +15,12 @@ class Car {
     User owner;
 
     // BEGIN
-    public String serialize() throws Exception{
+    public String serialize() throws Exception {
         var mapper = new ObjectMapper();
         return mapper.writeValueAsString(this);
-    }   
+    }
 
-    public static Car deserialize(String json) throws Exception{
+    public static Car deserialize(String json) throws Exception {
         var mapper = new ObjectMapper();
         return mapper.readValue(json, Car.class);
     }

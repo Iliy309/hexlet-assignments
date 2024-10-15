@@ -12,8 +12,6 @@ import java.nio.file.Files;
 import java.util.Map;
 import java.util.HashMap;
 
-
-
 class ValidationTest {
 
     private static ObjectMapper objectMapper;
@@ -48,6 +46,7 @@ class ValidationTest {
         Car car = new Car(1, "bmv", "x5", "black", owner);
         App.save(tempPath, car);
         String actualContent = readFile(tempPath);
+
         Map<String, Object> actual = objectMapper.readValue(actualContent, HashMap.class);
         String expectedContent = readFile(getFixturePath("expected1.json"));
         Map<String, Object> expected = objectMapper.readValue(expectedContent, HashMap.class);
@@ -56,8 +55,9 @@ class ValidationTest {
 
     @Test
     void testExtract() throws Exception {
-        Path fixturePath = getFixturePath("car.json");
-        Car instance = App.extract(fixturePath);
+        // Path fixturePath = getFixturePath("car.json");
+        var path = Path.of("src/test/resources/car.json");
+        Car instance = App.extract(path);
         assertThat(instance).isInstanceOf(Car.class);
         assertThat(instance.getId()).isEqualTo(5);
         assertThat(instance.getBrand()).isEqualTo("audi");

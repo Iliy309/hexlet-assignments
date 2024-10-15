@@ -1,18 +1,21 @@
 package exercise;
 
 import java.nio.file.Path;
-import java.io.File;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.StandardOpenOption;
-
-import javax.print.event.PrintJobAdapter;
 
 // BEGIN
 public class App {
+    public static void main(String[] args) {
+        System.out.println("hello world");
+        var path = Path.of("src/test/resources/car.json");
+        Car instance = App.extract(path);
+        System.out.println(instance);
+        User user = instance.getOwner();
+        System.out.println(user);
+    }
 
-    public static void save(Path path, Car car){
+    public static void save(Path path, Car car) {
         try {
             var data = car.serialize();
             Files.write(path, data.getBytes(StandardCharsets.UTF_8));
@@ -21,10 +24,10 @@ public class App {
         }
     }
 
-    public static Car extract(Path path){
+    public static Car extract(Path path) {
         Car car = null;
         try {
-            var json = Files.readAllBytes(path).toString();
+            var json = new String(Files.readAllBytes(path));
             car = Car.deserialize(json);
         } catch (Exception e) {
             e.printStackTrace();
