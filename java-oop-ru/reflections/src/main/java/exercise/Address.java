@@ -1,6 +1,5 @@
 package exercise;
 
-
 class Address {
     // BEGIN
     @NotNull
@@ -13,7 +12,7 @@ class Address {
     private String city;
 
     // BEGIN
-    @NotNull 
+    @NotNull
     // END
     private String street;
 
@@ -32,8 +31,8 @@ class Address {
         this.flatNumber = flatNumber;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("country = %s, city= %s, street = %s, houseNumber = %s, flatNumber = %s",
-                            country, city, street, houseNumber, flatNumber);
+                country, city, street, houseNumber, flatNumber);
     }
 }
