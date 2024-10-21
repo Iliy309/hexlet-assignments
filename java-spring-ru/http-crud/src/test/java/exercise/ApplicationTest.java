@@ -76,7 +76,7 @@ class ApplicationTest {
     public void testUpdatePost() throws Exception {
         var post = new Post("test-post", "new title", "new body");
 
-        var request = put("/posts/test-post")
+        var request = put("/posts/post1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(post));
 
