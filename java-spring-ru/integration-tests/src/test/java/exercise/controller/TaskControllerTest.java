@@ -113,7 +113,7 @@ class ApplicationTest {
                 .andExpect(status().isOk()).andReturn();
 
 
-        var optTask = taskRepository.findById(1l);
+        var optTask = taskRepository.findById(save.getId());
         assertThat(!optTask.isPresent()).isTrue();
     }
     // END
